@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Từ điển</title>
+</head>
+<body>
+Nhập Từ:<br><br>
+<input id="ta" type="text"/>
+<input type="button" onclick="tienganh()" value="onclick"><br><br>
+<p>ketqua</p>
+<p id="rs"><br><br>
+    <script>
+        let anh=["yey","love","hnd","book","mouth"]
+        let viet=["mắt","yêu","tay","sách","miệng"]
+        function tienganh() {
+            let a=document.getElementById("ta").value
+            let ketqua
+            for (let i=0; i<anh.length;i++){
+                if (a==anh[i]){
+                    ketqua=viet[i]
+                    break;
+                }else if (a==viet[i]) {
+                    ketqua=anh[i]
+                    break;
+                }else {
+                    ketqua="khong co trong tu dien"
+                }
+            }
+            document.getElementById("rs").innerHTML= "nghia cua từ : "+a+ " "+" là: " +ketqua
+        }
+    </script>
+</body>
+</html>
